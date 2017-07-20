@@ -15,9 +15,13 @@ hello: hello.o
 
 hello.o: hello.cpp
 
+input: input.o
+
+input.o: input.cpp
+
 .PHONY: clean
 clean:
-	rm -f  *.o a.out core hello
+	rm -f  *.o a.out core hello input
 
 .PHONY: all
-all: clean hello
+all: clean hello input
